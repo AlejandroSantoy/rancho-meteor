@@ -1,0 +1,72 @@
+<template name="mainLayout">
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="/visitas" style="padding-top:5px;">
+	      	<img src="bg_login.png" style="width:50px;">
+	      </a>
+	    </div>
+
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+    	        <li class="dropdown">
+    	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ganadería <span class="caret"></span></a>
+    	          <ul class="dropdown-menu" role="menu">
+    	            	<li><a href="/visitantes">Ganadería</a></li>
+    	            	<li><a href="/empresas">Agricultura</a></li>
+    	          </ul>
+    	        </li>
+    	        <li class="dropdown">
+    	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Agricultura <span class="caret"></span></a>
+    	          <ul class="dropdown-menu" role="menu">
+    	            	<li><a href="/usuarios">Usuarios</a></li>
+    	            	<li><a href="/roles">Roles</a></li>
+    	            	<li><a href="/funciones">Funciones</a></li>
+    	          </ul>
+    	        </li>
+    	        <li class="dropdown">
+    	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Administración<span class="caret"></span></a>
+    	          <ul class="dropdown-menu" role="menu">
+    	            	<li><a href="/categorias-area">Categorías</a></li>
+    	            	<li><a href="/areas">Áreas</a></li>
+    	          </ul>
+    	        </li>
+    	        <li class="dropdown">
+    	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Inventarios<span class="caret"></span></a>
+    	          <ul class="dropdown-menu" role="menu">
+    	            	<li><a href="/proceso-autorizacion">Proceso de autorización</a></li>
+    	            	<li><a href="/proceso-visita">Proceso de visita</a></li>
+    	            	<li><a href="/proceso-email">Emails</a></li>
+    	            	<li><a href="/tipo-transporte">Tipo de transporte</a></li>
+    	          </ul>
+    	        </li>
+	      </ul>
+
+	      <ul class="nav navbar-nav navbar-right">
+	        <li class="active">
+	        	<a href="#" style="padding-bottom:0px;">
+		        	<i class="material-icons medium-icon">account_circle</i> 
+		        	{{currentUser.username}}
+	        	</a>
+	        </li>
+	        <li>
+	        	<a href="#" style="padding-bottom:0px;" class="logout">
+	        		<i class="material-icons medium-icon text-danger">remove_circle</i> 
+	        	</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+    
+    <main>
+        {{>Template.dynamic template=content}}
+    </main>
+
+</template>
